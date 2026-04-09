@@ -5,6 +5,9 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     DATABASE_URL: str
+    LOTTO_START_DRAW_NO: int = 1
+    LOTTO_END_DRAW_NO: int = 1
+
     model_config = SettingsConfigDict(env_file=".env")
 
 
